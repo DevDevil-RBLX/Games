@@ -1,7 +1,10 @@
 const express = require('express');
+const path = require('path');
+
 const app = express();
 
-// Define routes or other application logic here
+// Serve static files from the "static" directory
+app.use(express.static(path.join(__dirname, 'static')));
 
 const port = 8080;
 app.listen(port, () => {
